@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+    <style>
+       
+
+        .main_header_left h1 {
+ font-size: 3rem;
+            margin: -0.9rem 0 2rem -1px ;
+
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    {{!-- // Call the partials --}}
+    {{>navbar}}
+    <!-- Main header -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11 col-12 mx-auto">
+                <div class="row">
+                    <!-- left side div -->
+                    <div class="col-md-12 col012 main_header_left align-items-center ">
+                        <figure class="erring">
+                            <img src="image/404.png" alt="Suraj" class="img-fluid" title="Suraj Technical"
+                               >
+                        </figure>
+                        <p>Welcome to Technical World</p>
+                        <h1>{{errorMsg}}</h1>
+                        <a href="/"><button>Go Back</button></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Code  -->
+    {{!-- call the partials files --}}
+    {{>footer}}
+</body>
+
+</html>

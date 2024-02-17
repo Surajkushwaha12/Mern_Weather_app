@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+    <style>
+    </style>
+</head>
+
+<body>
+    {{!-- // Call the partials --}}
+    {{>navbar}}
+    <!-- Main header -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="tempInformation">
+                    <div class="top_layer">
+                        <p id="day">Tuesday</p>
+                        <p id="today_date">13OCT</p>
+                    </div>
+
+                    <div class="main_layer">
+                        <p id="city_name"> Get Output</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span id="temp_real_val">0</span><sup>C</sup></p>
+                            <p id="temp_status"><i class="fa fa-cloud" area-hidden="true"></i></p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- Footer Code  -->
+    {{!-- call the partials files --}}
+    {{>footer}}
+
+    <script src="js/main.js"></script>
+    <script>
+
+        const getCurrDay = () => {
+            let weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            let currentTime = new Date();
+            Day = weekday[currentTime.getDay()];
+            let day = document.getElementById("day")
+            day.innerHTML = Day;
+
+            // Code for Date and month 
+            let month_name = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "June",
+                "July",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ];
+
+            let month = month_name[currentTime.getMonth() ];
+            let date = currentTime.getDate();
+
+            let today_date = document.getElementById("today_date");
+            today_date.innerText = `${date} ${month}`;
+        }
+
+        getCurrDay();
+
+
+    </script>
+</body>
+
+</html>

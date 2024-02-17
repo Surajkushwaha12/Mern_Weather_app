@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {{>headerLinks}}
+</head>
+
+<body>
+    {{!-- // Call the partials --}}
+   {{>navbar}}
+    <!-- Main header -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11 col-12 mx-auto">
+                <div class="row" id="row_data">
+                    <!-- left side div -->
+                    <div class="col-md-7 col012 main_header_left">
+                        
+                        <p>Welcome to weather app</p>
+                        <h1> I Am A <span class="text_clr"> Mern Stack Developer </span> And A Freelancer </h1>
+                        <a href="https://mern-portfolio-web.vercel.app/" target="_blank"><button>About me</button></a>
+                      
+                    </div>
+                    <!-- right side div -->
+                    <div class="col-md-5 col012 main_header_right ">
+                        <figure>
+                        <img src="image/picc.png" alt="Suraj" class="img-fluid" title="Suraj Technical" width="90%">
+                    </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer Code  -->
+ {{!-- call the partials files --}}
+ {{>footer}}
+</body>
+
+</html>
