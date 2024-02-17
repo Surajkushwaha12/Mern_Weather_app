@@ -9,9 +9,9 @@ const port = 8080;
 
 
 // Host the static website and set the path  and Handlebars 
-const staticPath = path.join(__dirname, "../public");
-const template_path = path.join(__dirname, "../templates/views")
-const partials_path = path.join(__dirname, "../templates/partials");
+const staticPath = path.join(__dirname, "/public");
+const template_path = path.join(__dirname, "/templates/views")
+const partials_path = path.join(__dirname, "/templates/partials");
 //Host the static website
 app.use(express.static(staticPath));
 app.set("view engine", "hbs");
